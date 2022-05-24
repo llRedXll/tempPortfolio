@@ -11,3 +11,8 @@ section {
   font-family: sans-serif;
   text-align: center;
 }
+
+#randomGif {
+  border-radius: 5px;
+  min-width: 600px;
+}
