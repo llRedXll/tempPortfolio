@@ -1,16 +1,17 @@
-//Example fetch using pokemonapi.co
-document.querySelector('button').addEventListener('click', getFetch)
+async function getRandomGif() {
+  try {
+    let randomOffset = Math.floor(Math.random() * 50) //generate a random number to get a random gif
 
-function getFetch(){
-  const choice = document.querySelector('input').value
-  const url = 'https://pokeapi.co/api/v2/pokemon/'+choice
+    const res = await fetch(`http://api.giphy.com/v/gifs/search?api_key=9veUyiKA2yTILMDUHFF6fS0Ps0sPXKur&q=embarrassed&limit=1&offset=${randomOffset}`) 
+    const data = await res.json()
 
-  fetch(url)
-      .then(res => res.json()) // parse response as JSON
-      .then(data => {
-        console.log(data)
-      })
-      .catch(err => {
-          console.log(`error ${err}`)
-      });
+    document.getElementById('randomGif').src = data.data[0].images.original.url //place random gif url into html doc
+
+  } catch (error) {
+    console.log('Ooops 😭');
+    console.log(error)
+  }
+  
 }
+
+getRandomGif()
