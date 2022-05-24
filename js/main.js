@@ -10,6 +10,8 @@ async function getRandomGif() {
   } catch (error) {
     console.log('Ooops 😭');
     console.log(error)
+    document.getElementById('randomGif').src = 'https://i.giphy.com/media/7NoNw4pMNTvgc/giphy.webp'
+    
   }
   
 }
