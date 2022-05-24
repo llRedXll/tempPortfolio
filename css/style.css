@@ -1,21 +1,13 @@
-/******************************************
-/* CSS
-/*******************************************/
-
-/* Box Model Hack */
-*{
-  box-sizing: border-box;
+main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(24, 24, 24);
 }
 
-/******************************************
-/* LAYOUT
-/*******************************************/
-img{
-  display: block;
-  margin: 0 auto;
+section {
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
 }
-
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
